@@ -5,6 +5,12 @@ A collection of loading indicators animated with flutter. Heavily inspired by [y
 ## Showcase
 <img src="https://raw.githubusercontent.com/songzhw/flutter_spinkit_szw/master/art/loadings.gif">
 
+|-------------|---------------|---------------|
+| pulse       | double_bounce | triple_bounce |
+| sound_wave  | chasing_dots  | cube_grid     |
+| beads_scale | beads_fade    | circle_3d     |
+| cube_3d     |               |               |
+
 ## Getting start
 
 ```dart
