@@ -31,13 +31,12 @@ class ShowcasePage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: GridView.count(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            children: List.generate(list.length, (index) =>
-                getWidgetOf(list[index])
-            ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: List.generate(list.length, (index) =>
+                  getWidgetOf(list[index])
+              )
+            )
           ),
         ),
       ),
@@ -45,7 +44,15 @@ class ShowcasePage extends StatelessWidget {
   }
 }
 
-LoadingWidget getWidgetOf(AnimData data)  => LoadingWidget(
-  size: 200, bgColor: data.bg,
-  animStyle: data.style,
-);
+Widget getWidgetOf(AnimData data)  => Column(children: [
+  Text(
+    data.style.toString().substring(10),
+    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+  ),
+  SizedBox(height: 10),
+  LoadingWidget(
+    size: 150, bgColor: data.bg,
+    animStyle: data.style,
+  ),
+  SizedBox(height: 40),
+]);

@@ -23,3 +23,9 @@ enum AnimStyle {
   CIRCLE_3D, CUBE_3D, FOLDING_CUBES
 }
 ```
+
+## Note
+There are several flutter spinkit libraries already in the pub.dev
+However, they are mostly focus on the widget.
+This library only focus on how to draw the animation by Canvas.
+That's the main difference.
